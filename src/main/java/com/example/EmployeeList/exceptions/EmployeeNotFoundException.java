@@ -1,4 +1,10 @@
-public class EmployeeNotFoundException extends RuntimeException {
+package com.example.EmployeeList.exceptions;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(HttpStatus.NOT_FOUND)
+public class EmployeeNotFoundException extends RuntimeException{
     public EmployeeNotFoundException() {
     }
 
